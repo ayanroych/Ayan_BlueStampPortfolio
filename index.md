@@ -68,38 +68,75 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-#define trigPin 13
-#define echoPin 12
-#define motor 7
-#define buzzer 6
+#define trigPin 12  
+#define echoPin 13   
+#define motorPin1 9  
+#define motorPin2 10 
+#define buzzer 6     
 
-void setup()
-{ pinMode(trigPin, OUTPUT);
-pinMode(echoPin, INPUT);
-pinMode(motor, OUTPUT);
-pinMode(buzzer,OUTPUT);
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(9600);
+  
+  
+  delay(600);
 }
 
-void loop()
-{ long duration, distance;
-digitalWrite(trigPin, LOW); 
-delayMicroseconds(2); 
-digitalWrite(trigPin, HIGH);
-delayMicroseconds(10); 
-digitalWrite(trigPin, LOW);
-
-duration = pulseIn(echoPin, HIGH);
-distance = (duration/2) / 29.1;
-
-if (distance < 70) // Checking the distance, you can change the value
-{ 
-digitalWrite(motor,HIGH); // When the the distance below 100cm
-digitalWrite(buzzer,HIGH);
-} else
-{
-digitalWrite(motor,LOW);// when greater than 100cm
-digitalWrite(buzzer,LOW); 
-} delay(500);
+void loop() {
+  long duration, distance;
+  
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration / 2) / 29.1;
+  
+  if (distance < 100) { 
+    Serial.print("OBSTACLE at ");
+    Serial.print(distance);
+    Serial.println("cm");
+    
+    int beepInterval;
+    if (distance < 10) {
+      beepInterval = 50;   
+    } else if (distance < 20) {
+      beepInterval = 150;  
+    } else if (distance < 40) {
+      beepInterval = 300;  
+    } else if (distance < 60) {
+      beepInterval = 500;  // 
+    } else {
+      beepInterval = 800;  
+    }
+    
+    
+    tone(buzzer, 2000, 100); 
+    delay(100);
+    noTone(buzzer);
+    delay(beepInterval);
+    
+    if (distance < 30) {
+      digitalWrite(motorPin1, HIGH);
+      digitalWrite(motorPin2, LOW);
+    } else {
+      digitalWrite(motorPin1, LOW);
+      digitalWrite(motorPin2, LOW);
+    }
+    
+  } else {
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    noTone(buzzer);
+  }
+  
+  delay(50); 
 }
 ```
 
