@@ -46,12 +46,8 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-For my first milestone I coded an active buzzer and an ultrasonic sensor such that when the ultrasonic sensor senses an object within range, the buzzer beeps, alerting the user that an object is in front of them. I also made it so that as an object moves closer to the ultrasonic sensor, the intensity of the beeping increases and as the object moves further away,
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+  For your first milestone, describe what your project is and how you plan to build it. You can include:
+My project is the Smart Walking Stick. I am using an ultrasonic sensor, a buzzer, and a vibration motor. How my project works is when the ultrasonic sensor senses an object in front of it, it will  alert the user by both beeping and vibrating. For my first milestone I coded an active buzzer and an ultrasonic sensor such that when the ultrasonic sensor senses an object within range, the buzzer beeps, alerting the user that an object is in front of them. I also made it so that as an object moves closer to the ultrasonic sensor, the intensity of the beeping increases and as the object moves further away, the intensity of the beeping decreases. When building this, one major challenge I faced was that I accidentally switch the 5-volt and Ground wire connecting to the ultrasonic sensor, so the Arduino wouldn't turn on. I eventually realized my mistake and fixed the problem. In the scope of my overall project, I plan to next add the vibration motor before finally assembling my walking stick and modififying it further.
 
 # Starter Project
 
