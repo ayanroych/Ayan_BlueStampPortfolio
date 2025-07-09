@@ -62,8 +62,7 @@ For my starter project, I created and RGB Slider that changes its color when you
 
 
 # Schematics 
-Schematics.png
-
+![Headstone Image](Schematics.png)
 # Code
 ```c++
 #define trigPin 12  
