@@ -32,7 +32,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dun05Or-xW8?si=hp3TUF0y-mtD9RFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   For my second milestone I added a vibration motor such that when an object is detected with range of the ultrasonic sensor, the motor vibrates, which can help alert users who are hearing-impaired, when there is an object ahead. Throughout this project, I was surprised with how easy Arduino was as I was expecting it to be significantly harder than it is. On this milestone, I faced a challenge with the vibration motor as it kept vibrating even when there was no obstacles ahead. I eventually realized it was a bug in the code. For my final milestone, I have to put all of the electrical components together into a  box and attach that box to a walking stick. 
 
