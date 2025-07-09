@@ -30,8 +30,6 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dun05Or-xW8?si=hp3TUF0y-mtD9RFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   For my second milestone I added a vibration motor such that when an object is detected with range of the ultrasonic sensor, the motor vibrates, which can help alert users who are hearing-impaired, when there is an object ahead. Throughout this project, I was surprised with how easy Arduino was as I was expecting it to be significantly harder than it is. On this milestone, I faced a challenge with the vibration motor as it kept vibrating even when there was no obstacles ahead. I eventually realized it was a bug in the code. For my final milestone, I have to put all of the electrical components together into a  box and attach that box to a walking stick. 
@@ -44,8 +42,6 @@ For your final milestone, explain the outcome of your project. Key details to in
   My project is the Smart Walking Stick. I am using an ultrasonic sensor, a buzzer, and a vibration motor. How my project works is when the ultrasonic sensor senses an object in front of it, it will  alert the user by both beeping and vibrating. For my first milestone I coded an active buzzer and an ultrasonic sensor such that when the ultrasonic sensor senses an object within range, the buzzer beeps, alerting the user that an object is in front of them. I also made it so that as an object moves closer to the ultrasonic sensor, the intensity of the beeping increases and as the object moves further away, the intensity of the beeping decreases. When building this, one major challenge I faced was that I accidentally switch the 5-volt and Ground wire connecting to the ultrasonic sensor, so the Arduino wouldn't turn on. I eventually realized my mistake and fixed the problem. In the scope of my overall project, I plan to next add the vibration motor before finally assembling my walking stick and modififying it further.
 
 # Starter Project
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pGypySyE4-o?si=uV5eLYcMAq4hEjHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
