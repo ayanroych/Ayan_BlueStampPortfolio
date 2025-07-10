@@ -21,8 +21,7 @@ You should comment out all portions of your portfolio that you have not complete
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
+For my final milestone, I put all of the electrical componenents into one intracately designed 3d printed box, with space for the three main modules: the ultrasonic sensor, the buzzer, and the vibrator. I then attached that box to a walking stick, hence, finishing the basic Smart Walking Stick. - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
