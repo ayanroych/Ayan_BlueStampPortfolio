@@ -56,17 +56,37 @@ For my final milestone, I put all of the electrical componenents into one intrac
 
   My project is the Smart Walking Stick. I am using an ultrasonic sensor, a buzzer, and a vibration motor. How my project works is when the ultrasonic sensor senses an object in front of it, it will use the piezzo buzzer and the vibration motor to alert the user by both beeping and vibrating. 
   
-  For my first milestone I coded an active buzzer and an ultrasonic sensor. An ultrasonic sensor works by sending ultrasonic soundwaves (sound waves with a frequency higher than the upper limit of human hearing) and measuring the time it takes for the soundwave to come back to it, calculating the distance of the nearest object. An active piezo buzzer functions by utilizing two main components, an oscillator and piezoelectric material. Piezoelectric material is special in a way such that it vibrates when it is fed electricity. The reason I was able to manipulate the beeps of the buzzer is because of the oscillator, which modifies the beeps piezo part of the buzzer sends out based on the code.  such that when the ultrasonic sensor senses an object within a certain range, the buzzer beeps, alerting the user that an object is in front of them. I also made it so that as an object moves closer to the ultrasonic sensor, the intensity of the beeping increases and as the object moves further away, the intensity of the beeping decreases. 
+  For my first milestone I coded an active buzzer and an ultrasonic sensor. I wired my system such that when the ultrasonic sensor senses an object within a certain range, the buzzer beeps, alerting the user that an object is in front of them. I also made it so that as an object moves closer to the ultrasonic sensor, the intensity of the beeping increases and as the object moves further away, the intensity of the beeping decreases. 
+
+**The Ultrasonic Sensor:**
+
+  An ultrasonic sensor works by sending ultrasonic soundwaves (sound waves with a frequency higher than the upper limit of human hearing) and measuring the time it takes for the soundwave to come back to it, calculating the distance of the nearest object. 
+  
+**The Active Piezzo Buzzer**
+  
+  An active piezo buzzer functions by utilizing two main components, an oscillator and piezoelectric material. Piezoelectric material is special in a way such that it vibrates when it is fed electricity. The reason I was able to manipulate the beeps of the buzzer is because of the oscillator, which modifies the beeps piezo part of the buzzer sends out based on the code. 
+
+**Schematics**  
+
   ![Headstone Image](Schematics.png)
   
+**Challenges**
   
-  When building this, one major challenge I faced was that I accidentally switch the 5-volt and Ground wire connecting to the ultrasonic sensor, so the Arduino wouldn't turn on. I eventually realized my mistake and fixed the problem. In the scope of my overall project, I plan to next add the vibration motor before finally assembling my walking stick and modififying it further.
+  When building this, one major challenge I faced was that I accidentally switch the 5-volt and Ground wire connecting to the ultrasonic sensor, so the Arduino wouldn't turn on. I eventually realized my mistake and fixed the problem. 
+  
+**Next Steps:**
+  
+  In the scope of my overall project, I plan to next add the vibration motor before finally assembling my walking stick and modififying it further.
 
 # Starter Project
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pGypySyE4-o?si=uV5eLYcMAq4hEjHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my starter project, I created and RGB Slider that changes its color when you move the slider. To build this, I soldered 3 sliders, an RGB LED, and a USB-C Port onto a premade RGB Slider board. The board already had connections in it so once I finished soldering, the device was completely functional. When building this, I faced many difficulties. The biggest challenge I faced was when the device didn't work. Later, I figured out that a special USB-C plug was required for it to work. For my next step, I plan to test compatibility between an ultrasonic sensor and a buzzer.
+For my starter project, I created and RGB Slider that changes its color when you move the slider. To build this, I soldered 3 sliders, an RGB LED, and a USB-C Port onto a premade RGB Slider board. The board already had connections in it so once I finished soldering, the device was completely functional. 
+
+**Challenges:**
+
+When building this, I faced many difficulties. The biggest challenge I faced was when the device didn't work. Later, I figured out that a special USB-C plug was required for it to work. For my next step, I plan to wire a basic functional system that beeps when an obstacle is detected within a set range.
 
 
 # Schematics 
