@@ -31,11 +31,13 @@ For my final milestone, I put all of the electrical componenents into one intrac
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dun05Or-xW8?si=hp3TUF0y-mtD9RFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-  For my second milestone I added a vibration motor. 
+**Changes**
+
+  For my second milestone I added a vibration motor. I wired it such that when an object is detected with range of the ultrasonic sensor, the motor vibrates, which can help alert users who are hearing-impaired, when there is an object ahead. 
  
   **The Vibration Motor:**  
   
-  A vibration motor works because motor has a small metal weight that looks like a half-circle or has a chunk cut out of it. When this lopsided weight spins around really fast, it creates vibrations. I wired it such that when an object is detected with range of the ultrasonic sensor, the motor vibrates, which can help alert users who are hearing-impaired, when there is an object ahead. 
+  A vibration motor works because motor has a small metal weight that looks like a half-circle or has a chunk cut out of it. When this lopsided weight spins around really fast, it creates vibrations. 
 
   **Schematics:**
   
@@ -54,7 +56,11 @@ For my final milestone, I put all of the electrical componenents into one intrac
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UNR_Ys4B2d8?si=_6AZb_8NVLbk55oe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+**My Project**
+
   My project is the Smart Walking Stick. I am using an ultrasonic sensor, a buzzer, and a vibration motor. How my project works is when the ultrasonic sensor senses an object in front of it, it will use the piezzo buzzer and the vibration motor to alert the user by both beeping and vibrating. 
+
+**Changes**
   
   For my first milestone I coded an active buzzer and an ultrasonic sensor. I wired my system such that when the ultrasonic sensor senses an object within a certain range, the buzzer beeps, alerting the user that an object is in front of them. I also made it so that as an object moves closer to the ultrasonic sensor, the intensity of the beeping increases and as the object moves further away, the intensity of the beeping decreases. 
 
