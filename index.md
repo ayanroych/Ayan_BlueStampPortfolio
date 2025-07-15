@@ -32,16 +32,21 @@ For my final milestone, I put all of the electrical componenents into one intrac
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Dun05Or-xW8?si=hp3TUF0y-mtD9RFD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
   For my second milestone I added a vibration motor. 
+ 
   **The Vibration Motor:**  
+  
   A vibration motor works because motor has a small metal weight that looks like a half-circle or has a chunk cut out of it. When this lopsided weight spins around really fast, it creates vibrations. I wired it such that when an object is detected with range of the ultrasonic sensor, the motor vibrates, which can help alert users who are hearing-impaired, when there is an object ahead. 
 
-  **Schematics**
+  **Schematics:**
+  
   ![Headstone Image](schematics2.png)
   
-  **Surprises and Challenges**  
+  **Surprises and Challenges:**  
+  
   Throughout this project, I was surprised with how easy Arduino was as I was expecting it to be significantly harder than it is. On this milestone, I faced a challenge with the vibration motor as it kept vibrating even when there was no obstacles ahead. I eventually realized it was a bug in the code. 
   
-  **Next Steps**
+  **Next Steps:**
+  
   For my final milestone, I have to put all of the electrical components together into a  box and attach that box to a walking stick I am also planning as a part of my 3rd milestone to create an app from which you can control. 
   
 
