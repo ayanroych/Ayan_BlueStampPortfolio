@@ -108,79 +108,135 @@ When building this, I faced many difficulties. The biggest challenge I faced was
 
 
 # Schematics
-![Headstone Image]()
+![Headstone Image](circuit_image.png)
 # Code
 ```c++
-#define trigPin 12  
-#define echoPin 13   
-#define motorPin1 9  
-#define motorPin2 10 
-#define buzzer 6     
+#include <BluetoothSerial.h>
+int Incoming_Value;
+long duration;
+float distance;
+bool programEnabled = false;  // Variable to track if program is on/off
+int MAX_DISTANCE = 0;
+
+#define trigPin 12 
+#define echoPin 13  
+#define motorPin1 2 
+#define motorPin2 4
+#define buzzer 15
+#define sliderPin 33
+#define MIN_MAX_DISTANCE 20    // Minimum value for MAX_DISTANCE
+#define MAX_MAX_DISTANCE 100   // Maximum value for MAX_DISTANCE
+BluetoothSerial BLE {};
 
 void setup() {
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  pinMode(motorPin1, OUTPUT);
-  pinMode(motorPin2, OUTPUT);
-  pinMode(buzzer, OUTPUT);
-  Serial.begin(9600);
-  
-  
-  delay(600);
+pinMode(trigPin, OUTPUT);
+pinMode(echoPin, INPUT);
+pinMode(motorPin1, OUTPUT);
+pinMode(motorPin2, OUTPUT);
+pinMode(buzzer, OUTPUT);
+pinMode(sliderPin, INPUT);
+Serial.begin(115200);
+BLE.begin("Smart Walking Stick");
+while (!BLE.connected())
+{Serial.print("waiting for client");
+}
+ Serial.println("System initialized. Send '1' to turn ON, '0' to turn OFF");
+delay(600);
 }
 
 void loop() {
+// Check for serial input
+if (BLE.available() > 0) {
+  Incoming_Value = BLE.read();
+  Serial.print("Receive Data");
+  Serial.println(Incoming_Value);
+  if (Incoming_Value == 254) {
+    programEnabled = true;
+    Serial.println("Program ENABLED");
+  } else if (Incoming_Value == 0) {
+    programEnabled = false;
+    Serial.println("Program DISABLED");
+    // Turn off all outputs when disabled
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    noTone(buzzer);
+  }
+   else if (Incoming_Value > 0 && Incoming_Value != 254) {
+      MAX_DISTANCE = Incoming_Value;
+   }
+  }
+
+ // Only run the main program if enabled
+if (programEnabled) {
   long duration, distance;
+   // Read slider value and map it to MAX_DISTANCE range
+  int average = 0;
+  int sliderValue = analogRead(sliderPin);
+   for (int i = 0; i < 10; i = i + 1) {
+    average = average + analogRead(sliderPin);
+  }
   
-  digitalWrite(trigPin, LOW);
+  average = average / 10;
+    MAX_DISTANCE = map(average, 0, 1023, MIN_MAX_DISTANCE, MAX_MAX_DISTANCE);
+   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
   digitalWrite(trigPin, LOW);
-  
-  duration = pulseIn(echoPin, HIGH);
+   duration = pulseIn(echoPin, HIGH);
   distance = (duration / 2) / 29.1;
-  
-  if (distance < 100) { 
+   // Print MAX_DISTANCE and current distance
+  Serial.print("MAX_DISTANCE: ");
+  Serial.print(MAX_DISTANCE);
+  Serial.print("cm | Current Distance: ");
+  Serial.print(distance);
+  Serial.println("cm");
+   if (distance < MAX_DISTANCE) {
     Serial.print("OBSTACLE at ");
     Serial.print(distance);
     Serial.println("cm");
-    
+  
+    //The speed of beeping changes based on distance
     int beepInterval;
     if (distance < 10) {
-      beepInterval = 50;   
+      beepInterval = 50;
     } else if (distance < 20) {
-      beepInterval = 150;  
+      beepInterval = 150;
     } else if (distance < 40) {
-      beepInterval = 300;  
+      beepInterval = 300;
     } else if (distance < 60) {
-      beepInterval = 500;  // 
-    } else {
-      beepInterval = 800;  
+      beepInterval = 500;
+    } else if (distance < 80) {
+      beepInterval = 800;
+    } else if (distance > 80) {
+      digitalWrite(buzzer, LOW);
     }
-    
-    
-    tone(buzzer, 2000, 100); 
+  
+    tone(buzzer, 2000, 100);
     delay(100);
     noTone(buzzer);
     delay(beepInterval);
-    
-    if (distance < 30) {
+  
+    //Where the vibrator comes to functionality if the object is within MAX_DISTANCE
+    if (distance < MAX_DISTANCE) {
       digitalWrite(motorPin1, HIGH);
       digitalWrite(motorPin2, LOW);
     } else {
       digitalWrite(motorPin1, LOW);
       digitalWrite(motorPin2, LOW);
     }
-    
   } else {
     digitalWrite(motorPin1, LOW);
     digitalWrite(motorPin2, LOW);
     noTone(buzzer);
   }
-  
-  delay(50); 
+   delay(50);
+} else {
+  // When disabled, just add a small delay to prevent excessive serial checking
+  delay(100);
 }
+}
+
 ```
 
 # Bill of Materials
