@@ -108,6 +108,7 @@ When building this, I faced many difficulties. The biggest challenge I faced was
 
 
 # Schematics
+![Headstone Image]()
 # Code
 ```c++
 #define trigPin 12  
