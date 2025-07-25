@@ -20,18 +20,19 @@ You should comment out all portions of your portfolio that you have not complete
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aliZ2vpz1Oo?si=7gou4Iu0YLSY9cTK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
+**Changes:**
+
 For my final milestone, I put all of the electrical componenents into one intracately designed 3d printed box, with space for the three main modules: the ultrasonic sensor, the buzzer, and the vibrator. I then attached that box to a walking stick, hence, finishing the basic Smart Walking Stick. 
 
-**Challenges**
+**Challenges:**
 
 One of my biggest challenges throughout this project was integrating Bluetooth and finding a way to connect. Originally, I was planning to just add an HC05 Bluetooth module to my Arduino, but it wouldn't connect, so we switched the entire Arduino to an ESP32. Still, it didn’t connect to an iPhone, so we had to order an Android phone to make my app. My second biggest challenge was getting the measurements for my 3d prints. Although I measured with highly accurate calipers, it took me 6 tries to print just two items.
 
-**Learnings**
+**Learnings:**
  
 I learned many things at Bluestamp. Before Bluestamp, I was completely oblivious to the fact that programming something so helpful was not super hard. Through Bluestamp, I learned how to code in C language, how to assemble an Arduino circuit, what all of the pins on an Arduino and an ESP32 are meant for, and how to solder. I also learned about different laws in building a circuit, like Ohm’s Law. 
 
-**Next Steps**
+**Next Steps:**
 
 After Bluestamp, I plan to make my project even better by sizing it down and making my app more functional by adding a feature where you can set the Max Distance through the app.
 
