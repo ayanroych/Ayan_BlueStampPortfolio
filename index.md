@@ -53,7 +53,7 @@ After Bluestamp, I plan to make my project even better by sizing it down and mak
   
   **Next Steps:**
   
-  For my final milestone, I have to put all of the electrical components together into a  box and attach that box to a walking stick I am also planning as a part of my 3rd milestone to create an app from which you can control. 
+  For my final milestone, I will put all of the electrical components together into a  box and attach that box to a walking stick. I am also planning as a part of my 3rd milestone to create an app from which you can control my Smart Walking Stick. 
   
 
 # First Milestone
