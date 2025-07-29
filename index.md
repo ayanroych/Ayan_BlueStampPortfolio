@@ -13,7 +13,7 @@ Imagine you need assitance walking and are visually impaired. Many elderly peopl
 
 **Changes:**
 
-For my final milestone, I put all of the electrical componenents into one intracately designed 3d printed box, with space for the three main modules: the ultrasonic sensor, the buzzer, and the vibrator. I then attached that box to a walking stick, hence, finishing the basic Smart Walking Stick. 
+For my final milestone, I put all of the electrical componenents into one intricately designed 3d printed box, with space for the three main modules: the ultrasonic sensor, the buzzer, and the vibrator. I then attached that box to a walking stick, hence, finishing the basic Smart Walking Stick. I also added an app form which you can turn my Smart Walking Stick on or off.
 
 **Challenges:**
 
