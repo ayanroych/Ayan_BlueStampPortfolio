@@ -1,5 +1,5 @@
 # Smart Walking Stick
-Imagine you need assitance walking and are visually impaired. Many elderly people face a similar problem when they try to walk, and regardless where they are, they have an extreme risk of collision with another individual or object. This project, the _Smart Walking Stick_ ,solves that problem, by implementing haptic feedback and ultrasonic sensors to alert the user, all in one everyday walking stick.
+Imagine you need assitance walking and are visually impaired. Many elderly people face a similar problem when they try to walk, and regardless of where they are, they have an extreme risk of collision with another individual or object. This project, the _Smart Walking Stick_ ,solves that problem, by implementing haptic feedback and ultrasonic sensors to alert the user, all in one everyday walking stick.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
